@@ -30,7 +30,8 @@ def convert_nx_to_adj_list(G: nx.Graph):
 
 def generate_connected_weighted_graph(nodes_number: int):
     """Gera um grafo ponderado e conectado de forma eficiente."""
-    G = nx.barabasi_albert_graph(nodes_number, 2, seed=42)
+    #G = nx.barabasi_albert_graph(nodes_number, 2, seed=42)
+    G = nx.gnp_random_graph(nodes_number, 2, 42)
     for (u, v) in G.edges():
         G.edges[u, v]['weight'] = random.randint(1, 20)
     return G
@@ -154,5 +155,6 @@ def generate_plots(summary_df: pd.DataFrame):
     fig_co2.savefig("co2_emission_comparison.png")
 
 if __name__ == '__main__':
-    node_sizes_to_test = [10, 100] 
+    node_sizes_to_test = [100,500,1000,5000,10000,50000,100000] 
+    #node_sizes_to_test = [10,100]
     run_experiment(times=5, node_sizes=node_sizes_to_test)
