@@ -29,7 +29,7 @@ O script principal (```main.py```) executa o seguinte processo:
 1. __Execução dos Algoritmos__: Para cada um dos 5 nós de origem, o caminho mais curto para todos os outros nós é calculado usando três métodos:
     * __Dijkstra Clássico__: Implementação que busca o nó de menor distância em um array ou lista ($O(V^2)$).
     * __Dijkstra com Min-Heap__: Implementação otimizada usando a estrutura de dados ```Minimal Heap``` ($O(E \log V)$).
-    * __Referência (NetworkX)__: A função ```nx.shortest_path_length()``` como base de comparação.
+    * __Referência (NetworkX)__: A função ```nx.single_source_dijkstra()``` como base de comparação.
 1. __Robustez Estatística__: O experimento (passos 2 e 3) é repetido 20 vezes para cada tamanho de grafo, trocando os 5 nós de origem a cada repetição para garantir uma amostragem robusta.
 1. __Coleta de Métricas__: Para cada execução individual, as seguintes métricas são registradas:
     * __Tempo de Execução (s)__: Medido com a biblioteca ```time```.
@@ -43,7 +43,7 @@ Os resultados demonstram a clara superioridade da implementação com Min-Heap, 
 
 ![Gráfico Tempo de execução x Nós](resultados/execution_time_comparison.png)
 
-Como esperado pela análise de complexidade, o tempo de execução da versão clássica ($O(V^2)$) cresce quadraticamente, tornando-se inviável rapidamente. A versão com Min-Heap ($O(E \log V)$) escala de forma muito mais eficiente, apresentando um desempenho próximo ao da função otimizada do ```networkx```.
+Como esperado pela análise de complexidade, o tempo de execução da versão clássica ($O(V^2)$) cresce quadraticamente, tornando-se inviável rapidamente. A versão com Min-Heap ($O(E \log V)$) escala de forma muito mais eficiente, apresentando um desempenho superior ao da função otimizada do ```networkx```.
 
 ### Pegada de Carbono (CO₂)
 
