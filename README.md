@@ -3,6 +3,8 @@ Este repositório contém um estudo experimental em Python que compara a perform
 
 O objetivo é quantificar não apenas a eficiência computacional, mas também o impacto ambiental de cada abordagem ao escalar o tamanho do problema (número de nós no grafo). As emissões de carbono são rastreadas usando a biblioteca [CodeCarbon](https://codecarbon.io/).
 
+Link do vídeo no youtube: https://youtu.be/jgsX6Wva_7s
+
 ## 📊 Índice
 * [Contexto](#-contexto)
 * [Metodologia Experimental](#-metodologia-experimental)
