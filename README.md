@@ -1,12 +1,12 @@
 ## Análise de Eficiência e Emissão de CO₂ do Algoritmo de Dijkstra
-Este repositório contém um estudo experimental em Python que compara a performance (tempo de execução) e a pegada de carbono (emissões de CO₂) de duas implementações do algoritmo de Dijkstra: a versão __Clássica__ ($O(V^2)$) e a versão otimizada com __Min-Heap__ ($O(E \log V)$).
+Este repositório contém um estudo experimental em Python que compara a performance (tempo de execução) e a pegada de carbono (emissões de CO₂) de duas implementações do algoritmo de Dijkstra: a versão __Clássica__ ( $O(V^2)$ ) e a versão otimizada com __Min-Heap__ ( $O(E \log V)$ ).
 
 O objetivo é quantificar não apenas a eficiência computacional, mas também o impacto ambiental de cada abordagem ao escalar o tamanho do problema (número de nós no grafo). As emissões de carbono são rastreadas usando a biblioteca [CodeCarbon](https://codecarbon.io/).
 
 ## 📊 Índice
-* [Contexto](##-🎯-contexto)
-* [Metodologia Experimental](🔬-metodologia-experimental)
-* [Resultados](📈-resultados)
+* [Contexto](#-contexto)
+* [Metodologia Experimental](#-metodologia-experimental)
+* [Resultados](#-resultados)
     * [Tempo de execução](#tempo-de-execução)
     * [Pegada de carbono](#pegada-de-carbono-co)
     * [Tabela de resultados](#tabela-de-resultados)
@@ -14,7 +14,7 @@ O objetivo é quantificar não apenas a eficiência computacional, mas também o
 * [Como reproduzir o experimento](#-como-reproduzir-o-experimento)
 
 ## 🎯 Contexto
- O algoritmo de Dijkstra é um pilar fundamental na teoria dos grafos para encontrar os caminhos mais curtos em um grafo ponderado. Embora a complexidade assintótica seja bem conhecida ($O(V^2)$ para a implementação com array e $O(E \log V)$ ou $O(E + V \log V)$ para implementações com Min-Heap), este projeto busca:
+ O algoritmo de Dijkstra é um pilar fundamental na teoria dos grafos para encontrar os caminhos mais curtos em um grafo ponderado. Embora a complexidade assintótica seja bem conhecida ( $O(V^2)$ ) para a implementação com array e $O(E \log V)$ ou $O(E + V \log V)$ para implementações com Min-Heap), este projeto busca:
  
  1. __Validar empiricamente__ a diferença de performance em tempo de execução.
  
@@ -51,7 +51,7 @@ Como esperado pela análise de complexidade, o tempo de execução da versão cl
 
 As emissões de CO₂ estão diretamente correlacionadas com o tempo de execução e o consumo de energia da CPU/GPU. A ineficiência do algoritmo clássico se traduz diretamente em um maior gasto energético e, consequentemente, uma maior pegada de carbono para resolver o mesmo problema.
 
-### Tabela de Resultadoso
+### Tabela de Resultados
 
 A tabela abaixo resume os resultados médios para os grafos testado.
 
