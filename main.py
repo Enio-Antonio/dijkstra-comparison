@@ -155,6 +155,6 @@ def generate_plots(summary_df: pd.DataFrame):
     fig_co2.savefig("co2_emission_comparison.png")
 
 if __name__ == '__main__':
-    node_sizes_to_test = [100,500,1000,5000,10000,50000,100000] 
+    node_sizes_to_test = [100,500,1000,5000] 
     #node_sizes_to_test = [10,100]
-    run_experiment(times=5, node_sizes=node_sizes_to_test)
+    run_experiment(node_sizes=node_sizes_to_test)
